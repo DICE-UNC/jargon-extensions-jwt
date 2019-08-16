@@ -18,7 +18,7 @@ public interface JwtIssueService {
 	 * @param subject {@code String} with the subject for the JWT claim
 	 * @return {@code String} with the JWT token
 	 */
-	String issueJwtToken(String subject);
+	public String issueJwtToken(String subject);
 
 	/**
 	 * Given a JWT token, return the decoded claims
@@ -26,6 +26,6 @@ public interface JwtIssueService {
 	 * @param token {@code String} with the JWT token
 	 * @return {@link Jws} with the associated claims
 	 */
-	Jws<Claims> decodeJwtToken(String token);
+	public Jws<Claims> decodeJwtToken(String token);
 
 }

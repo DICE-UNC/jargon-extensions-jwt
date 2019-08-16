@@ -18,7 +18,7 @@ import io.jsonwebtoken.security.Keys;
  * @author Mike Conway - NIEHS
  *
  */
-public class JwtIssueServiceImpl {
+public class JwtIssueServiceImpl implements JwtIssueService {
 
 	public static final Logger log = LoggerFactory.getLogger(JwtIssueServiceImpl.class);
 
@@ -39,6 +39,13 @@ public class JwtIssueServiceImpl {
 		myKey = Keys.hmacShaKeyFor(jwtServiceConfig.getSecret().getBytes());
 	}
 
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * org.irods.jargon.irodsext.jwt.JwtIssueService#issueJwtToken(java.lang.String)
+	 */
+	@Override
 	public String issueJwtToken(final String subject) {
 		log.info("issueJwtToken()");
 
@@ -52,6 +59,13 @@ public class JwtIssueServiceImpl {
 
 	}
 
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see org.irods.jargon.irodsext.jwt.JwtIssueService#decodeJwtToken(java.lang.
+	 * String)
+	 */
+	@Override
 	public Jws<Claims> decodeJwtToken(final String token) {
 		log.info("decodeJwtToken()");
 

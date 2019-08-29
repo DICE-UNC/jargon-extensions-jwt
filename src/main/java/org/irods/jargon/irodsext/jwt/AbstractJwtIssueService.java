@@ -10,7 +10,7 @@ import io.jsonwebtoken.Jws;
  * @author Mike Conway - NIEHS
  *
  */
-public interface JwtIssueService {
+public abstract class AbstractJwtIssueService {
 
 	/**
 	 * Given a subject, issue a proper JWT that can be understood by Metalnx plugins
@@ -18,7 +18,7 @@ public interface JwtIssueService {
 	 * @param subject {@code String} with the subject for the JWT claim
 	 * @return {@code String} with the JWT token
 	 */
-	public String issueJwtToken(String subject);
+	public abstract String issueJwtToken(String subject);
 
 	/**
 	 * Given a JWT token, return the decoded claims
@@ -26,6 +26,6 @@ public interface JwtIssueService {
 	 * @param token {@code String} with the JWT token
 	 * @return {@link Jws} with the associated claims
 	 */
-	public Jws<Claims> decodeJwtToken(String token);
+	public abstract Jws<Claims> decodeJwtToken(String token);
 
 }

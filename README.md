@@ -3,9 +3,9 @@ Jargon Extensions API for irods-ext
 
 
 # Project: Jargon Extensions JWT
-### Date: 
-### Release Version: 4.3.1.0-SNAPSHOT
-### git tag:
+### Date: 11/12/2020
+### Release Version: 4.3.2.0-RELEASE
+### git tag: 4.3.2.0-RELEASE
 
 ## Description
 

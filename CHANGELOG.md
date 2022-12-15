@@ -8,7 +8,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-#### No changes in library this release, aligning with general 4.3.2.4-RELEASE of Jargon
-
 ### Removed
 

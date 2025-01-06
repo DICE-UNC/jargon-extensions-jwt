@@ -6,8 +6,8 @@ package org.irods.jargon.irodsext.jwt;
 import java.security.Key;
 import java.util.Date;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
@@ -20,7 +20,7 @@ import io.jsonwebtoken.security.Keys;
  */
 public class JwtIssueServiceImpl extends AbstractJwtIssueService {
 
-	public static final Logger log = LoggerFactory.getLogger(JwtIssueServiceImpl.class);
+	public static final Logger log = LogManager.getLogger(JwtIssueServiceImpl.class);
 
 	private final JwtServiceConfig jwtServiceConfig;
 	private final Key myKey;

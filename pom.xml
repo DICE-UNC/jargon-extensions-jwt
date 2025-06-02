@@ -97,7 +97,7 @@
 						<id>0</id>
 						<phase>validate</phase>
 						<configuration>
-							<tasks>
+							<target>
 								<delete
 									file="${basedir}/src/test/resources/testing.properties" />
 								<touch
@@ -126,7 +126,7 @@
 									test.irods.userDN=${jargon.test.irods.userDN}
 									test.irods.scratch.subdir=${jargon.test.irods.scratch.subdir}
 								</echo>
-							</tasks>
+							</target>
 						</configuration>
 						<goals>
 							<goal>run</goal>
